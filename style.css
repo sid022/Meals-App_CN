@@ -1,0 +1,433 @@
+/* Reset all values  */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Addition of Background Image */
+body {
+  background-image: url("./Images/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* HomePage */
+/* Navigation Bar */
+nav {
+    background-color: #dbd6d6;
+    box-shadow: 4px 2px 8px #181919;
+    height: 72px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto;
+    text-shadow: 2px 2px 20px #362626;
+}
+
+.favorites-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.favorites-icon span {
+    font-size: 22px;
+    margin-left: 5px;
+    font-weight: bold;
+    color: #444;
+    text-decoration: none;
+}
+
+.favorites-icon:hover span {
+    color: #000;
+    text-decoration: none;
+}
+/* End of Navigation Bar */
+
+/* CSS code for sidebar */
+.sidebar {
+    position: fixed;
+    top: 73px;
+    right: -320px; 
+    width: 320px; 
+    height: 100%;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out; 
+    z-index: 1;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+.sidebar-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative; 
+}
+
+.sidebar-heading::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #dbd6d6;
+    border-radius: 50%;
+}
+
+.sidebar-heading::after {
+    content: "";
+    position: absolute;
+    top: calc(50% + 4px);
+    left: -10px;
+    width: 1px;
+    height: calc(100% - (50% + 4px));
+    background-color: #dbd6d6;
+}
+
+.sidebar-heading h2 {
+    font-size: 20px;
+    color: #555;
+    margin: 0;
+    padding-left: 10px;
+}
+
+/* Favourites Items after addition */
+.fav_items {
+  height: 700px;
+  width: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  
+}
+
+.item {
+  display: flex;
+  gap: 10px;
+}
+
+.left {
+  width: 100px;
+}
+
+.fav-item-image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+.fav-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.right {
+  flex-grow: 1;
+}
+
+.fav-item-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.fav-item-details p {
+  flex: 1 1 100%;
+  margin: 0;
+  font-size:large;
+}
+
+.remove-button {
+  padding: 8px 15px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  font-weight: bolder;
+}
+
+.remove-button:hover {
+  background-color: #cc0000;
+}
+
+.fav_items::-webkit-scrollbar {
+  display: none;
+}
+
+.fav_items{
+  -ms-overflow-style: none;
+}
+
+/* Start of Search Section */
+.search-container {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./Images/searchbg.jpg); 
+    background-size: cover;
+    background-position: center; 
+    filter: blur(2px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+    font-family: cursive;
+    color: #1e1a1a;
+    text-shadow: 2px 5px 10px rgb(203 7 7 / 100%);
+}
+.new-search-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin: 20px auto;
+    background-color: #f3d7d7;
+    border-radius: 25px;
+    box-shadow: 4px 4px 12px 10px rgb(70 48 48);
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    color: #444;
+}
+
+.bi-search-heart {
+    font-size: 24px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f3d7d7;
+    font-family: cursive;
+    font-size: 15px;
+    font-weight: 600;
+}
+/* End of Search Section */
+
+/* Start of Card Descriptions  */
+#cards-holder {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.food-card {
+    width: 20%;
+    margin-bottom: 15px;
+    background-color: hsl(234, 39%, 85%);
+    border-radius: 20px;
+    padding: 1px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+    height: 270px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.left-section {
+    flex: 0.3;
+    height: 55%;
+}
+
+.right-section {
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 7px;
+    width: 100%;
+}
+
+.right-section p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #080404;
+    text-shadow: 1px 1px 2px rgba(207, 181, 181, 0.3);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.right-section span {
+    font-size: 15px;
+    font-weight: bold;
+    color: #0a0202;
+    text-shadow: 1px 1px 2px rgba(194, 176, 176, 0.3);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.extras {
+    flex: 0.1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.details,
+.video,
+.fav-icon {
+    flex-basis: 25%;
+    background-color:#0a0a23;
+    color: #fff;
+    border: none;
+    border-radius: 10%; 
+    box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+    width: 100%; 
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.details:hover,
+.video:hover,
+.fav-icon:hover {
+    background-color: #0a0a23;
+    color: #fff;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* End of Card Descriptions  */
+
+/* Details Page */
+/* Container styles */
+.card-container {
+  width: 60%;
+  margin: 20px;
+  height: 50%;
+  border: 1px solid #464444;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to right, #f5f5f5, #e8e8e8);
+  border-radius: 10px;
+}
+
+.mtitle {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  border-radius: 10px 10px 0 0;
+}
+
+.mtitle h3 {
+  font-size: 24px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.sectionLR {
+  display: flex;
+}
+
+.left_section {
+  flex: 40%;
+}
+
+.left_section .image {
+  margin-top: 20px;
+  margin-left: 5px;
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.right_section {
+  flex: 60%;
+  padding: 10px;
+}
+
+.right_section p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.card-container:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/*CSS for When no result found after search */
+.cards p.no-results-message {
+  font-size: 40px;
+  text-align: center;
+  color: rgb(141, 8, 108);
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+/* This is the complete CSS for the mealsApp */

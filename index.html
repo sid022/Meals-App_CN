@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals App</title>
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Favicon -->
+    <link rel="icon" href="./Images/logo.jpg">
+</head>
+
+<body>
+    <!-- This is Navigation Section -->
+    <div class="full_container">
+        <nav>
+            <!-- <div class="navbar"> -->
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Images/logo.jpg" alt="">
+                    <span>FUn Food </span>
+                </div>
+                <!-- <div class="sidebar"> -->
+                <div class="favorites-icon" id="fav" onclick="toggleSidebar()">
+                    <span>Favourites♥</span>
+                </div>
+                <!-- </div> -->
+            </div>
+        </nav>
+        <main>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <!-- <div class="sidebar-heading"> -->
+                    <div class="sidebar-heading">Favourites</div>
+                    <!-- <div class="fav_items"> -->
+                    <div class="fav_items" id="favourites-body">
+                        <!-- <div class="items"> -->
+                        <div class="item">
+                            <!-- <div class="left"> -->
+                            <div class="left">
+                                <!-- <div class="fav-item-image"> -->
+                                <div class="fav-item-image">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <!-- <div class="fav-item-details"> -->
+                                <div class="fav-item-details">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="title">
+                    Find Meals Here
+                </div>
+                <div class="new-search-input">
+                    <div class="icon">
+                        <i class="bi bi-search-heart"></i>
+                    </div>
+                    <form>
+                        <input id="search-input" type="text" placeholder="A Perfect Place for Foodies" />
+                    </form>
+                </div>
+            </div>
+            <!-- Cards and Its Views -->
+            <div class="cards" id="cards-holder">
+            </div>
+        </main>
+    </div>
+
+    <!-- Inclusion of Javascript file -->
+    <script src="index.js"></script>
+</body>
+
+</html>
